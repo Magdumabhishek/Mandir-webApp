@@ -1,4 +1,4 @@
-const { getDonation, postDonation, putDonation, deleteDonation } = require("../Controller/donationController")
+const { getDonation, postDonation, putDonation, deleteDonation } = require("../controller/donationController")
 
 const route = require("express").Router()
 const auth = require("../Authentication/auth")

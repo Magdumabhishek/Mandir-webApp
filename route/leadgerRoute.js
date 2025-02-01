@@ -1,4 +1,4 @@
-const { getLeadger, postLeadger, putLeadger, deleteLeadger } = require("../Controller/leadgerController")
+const { getLeadger, postLeadger, putLeadger, deleteLeadger } = require("../controller/leadgerController")
 const auth = require("../Authentication/auth")
 
 const route = require("express").Router()
