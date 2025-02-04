@@ -1,8 +1,7 @@
 const auth = require("../Authentication/auth")
 const {getExpense,postExpense,putExpense,deleteExpense} = require("../controller/expenseController")
-const express = require("express")
 
-const route = express()
+const route = require("express").Router()
 
 route.get("/",auth,getExpense)
 route.post("/",auth,postExpense)

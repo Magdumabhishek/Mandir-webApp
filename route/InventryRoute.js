@@ -2,7 +2,8 @@ const {getInventry,postInventry,putInventry,deleteInventry} = require("../contro
 const express = require("express")
 const auth = require("../Authentication/auth")
 
-const route = express()
+const route = require("express").Router()
+
 
 route.get("/",auth,getInventry)
 route.post("/",auth,postInventry)
