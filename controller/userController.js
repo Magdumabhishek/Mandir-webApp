@@ -51,7 +51,8 @@ exports.login = async (req, res) => {
         if (!comparePassword) return res.json({ errors: true, message: "invalid username or password" })
         const token = await jwt.sign({ _id: userExists._id }, process.env.SEC)
 
-        return res.json({ error: false, data: userExists, token: token })
+        return res.json({errros:false,data:{token:token,user:userExists}})
+        
     } catch (error) {
         return res.status(400).json({ error: true, message: error.message })
     }
